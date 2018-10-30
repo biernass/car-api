@@ -22,16 +22,26 @@ public class CarController {
     private CarService carService;
 
     @RequestMapping(value = "/cars")
-    public List<CarDto> findCars(){
+    public List<CarDto> findCars() {
         return carService.findAll();
     }
 
     @RequestMapping("/car/{id}")
-    public CarDto findCarById(@PathVariable long id){
+    public CarDto findCarById(@PathVariable long id) {
         try {
             return carService.findCarById(id);
-        } catch(CarNotFoundException ex){
+        } catch (CarNotFoundException ex) {
             logger.info("Car with id: " + id + " not found");
+        }
+        return null;
+    }
+
+    @RequestMapping("/car/vin={vin}")
+    public CarDto findCarByVin(@PathVariable String vin) {
+        try {
+            return carService.findCarByVin(vin);
+        } catch (CarNotFoundException ex) {
+            logger.info("Car with VIN: " + vin + " not found");
         }
         return null;
     }
