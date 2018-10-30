@@ -9,14 +9,14 @@ public class Car {
     @Id
     private Long id;
     private String vin;
-    private LocalDate yearOfProduction;
+    private String yearOfProduction;
     private String brand;
     private String model;
 
     @Enumerated(EnumType.STRING)
     private CarType carType;
 
-    public Car(Long id, String vin, LocalDate yearOfProduction, String brand, String model, CarType carType) {
+    public Car(Long id, String vin, String yearOfProduction, String brand, String model, CarType carType) {
         this.id = id;
         this.vin = vin;
         this.yearOfProduction = yearOfProduction;
@@ -33,7 +33,7 @@ public class Car {
         return vin;
     }
 
-    public LocalDate getYearOfProduction() {
+    public String getYearOfProduction() {
         return yearOfProduction;
     }
 
