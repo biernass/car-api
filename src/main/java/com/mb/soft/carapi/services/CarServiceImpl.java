@@ -5,6 +5,7 @@ import com.mb.soft.carapi.dto.CarDto;
 import com.mb.soft.carapi.entity.Car;
 import com.mb.soft.carapi.exceptions.CarNotFoundException;
 import com.mb.soft.carapi.repositories.CarRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Iterator;
@@ -16,7 +17,9 @@ import java.util.stream.StreamSupport;
 @Service
 public class CarServiceImpl implements CarService {
 
+    @Autowired
     private CarRepository carRepository;
+    @Autowired
     private CarDtoConverter carDtoConverter;
 
     @Override

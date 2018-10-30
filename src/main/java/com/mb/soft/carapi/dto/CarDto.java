@@ -1,5 +1,7 @@
 package com.mb.soft.carapi.dto;
+
 import com.mb.soft.carapi.entity.CarType;
+
 import java.time.LocalDate;
 
 public class CarDto {
@@ -21,5 +23,27 @@ public class CarDto {
         this.carType = carType;
     }
 
+    public Long getId() {
+        return id;
+    }
 
+    public String getVin() {
+        return vin;
+    }
+
+    public String getYearOfProduction() {
+        return yearOfProduction;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public String getCarType() {
+        return carType;
+    }
 }

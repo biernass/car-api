@@ -16,6 +16,9 @@ public class Car {
     @Enumerated(EnumType.STRING)
     private CarType carType;
 
+    public Car() {
+    }
+
     public Car(Long id, String vin, String yearOfProduction, String brand, String model, CarType carType) {
         this.id = id;
         this.vin = vin;
