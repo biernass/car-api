@@ -9,7 +9,7 @@ public interface CarService {
 
     List<CarDto> findAll();
 
-    CarDto findById(Long id) throws CarNotFoundException;
+    CarDto findCarById(Long id) throws CarNotFoundException;
 
     CarDto findCarByVin(String vin) throws  CarNotFoundException;
 
